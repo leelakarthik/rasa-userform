@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   web:
-    image: leelakarthik/react-chat:latest
+    image: leelakarthik/react-chat:v2
     ports:
       - 3000:3000
     volumes:
