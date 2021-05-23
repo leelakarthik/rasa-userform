@@ -206,4 +206,9 @@ nlu:
       - nevermind
       - I want to do something else
       - I changed my mind
-  - lookup: name.yml
+  - lookup: name
+    examples: |
+      - name.yml
+  - lookup: fname
+    examples: |
+      - fname.yml

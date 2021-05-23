@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  web:
+    image: leelakarthik/react-chat:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./react-app/
+    depends_on: 
+      - rasa
+  rasa:
+    image: leelakarthik/rasa-app:latest
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app/
+    command:
+      - run 
+      - --cors 
+      - "*"
+    depends_on: 
+      - action_server
+  action_server:
+    image: rasa/rasa-sdk
+    ports:
+      - 5055:5055
+    volumes:
+      - ./actions:/app/actions
+
