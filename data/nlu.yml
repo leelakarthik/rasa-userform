@@ -1,0 +1,209 @@
+version: "2.0"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - howdy
+      - yo
+      - bonjur
+      - hi
+      - good morning
+      - good evening
+      - hey there
+      - Hi
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you around
+      - see you later
+  - intent: affirm
+    examples: |
+      - yes
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - sure
+      - ok
+      - okay
+      - why not
+      - ok great
+      - yes I did
+      - yeah, great
+      - pretty good
+      - fine
+      - You bet
+      - I sure did
+      - more or less
+  - intent: deny
+    examples: |
+      - no
+      - never
+      - I don't think so
+      - no way
+      - not really
+      - none
+      - absolutely not
+      - no thanks
+      - didn't do any
+      - no I didn't
+      - could have been better
+      - not great
+      - nope
+      - no goal
+  - intent: mood_great
+    examples: |
+      - perfect
+      - amazing
+      - feeling like a king
+      - wonderful
+      - cheerful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+  - intent: thankyou
+    examples: |
+      - okay great thanks
+      - thank you
+      - sure thanks
+      - thanks bye
+      - thanks
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - are you bot?
+  - intent: inform
+    examples: |
+      - my name is [leela](name)
+      - my name is [karthik](name)
+      - my name is [kiran](name)
+      - my name is [leela](name)
+      - my name is [vijay](name)
+      - my name is [ramesh rao](name)
+      - my name is [leela](name)
+      - people call me [leela](name)
+      - you can call me [leela](name)
+      - [leela](name) is my name
+      - [leela](name) is my good name
+      - [leela](name) is what people call me
+      - [leela](name) is name, i want you to call me
+      - [pavani](name)
+      - [sai](name)
+      - my name is [kiran kumar](name)
+      - my name is [kiran](name)
+      - my name is [tim](name)
+      - [kishore](name)
+      - i don't want to say my name, you can call me [leela](name)
+      - ok, my name is [leela](name)
+      - my nick name is [leela](name)
+
+  - intent: fname
+    examples: |
+      - my father name is [leela](fname)
+      - people call my father [leela](fname)
+      - my father name is [leela](fname)
+      - my father name is [karthik](fname)
+      - my father name is [kiran](fname)
+      - my father name is [leela](fname)
+      - my father name is [vijay](fname)
+      - my father name is [ramesh rao](fname)
+      - my father name is [leela](fname)
+      - [leela](fname) is my father name
+      - [leela](fname) is what people call my father
+      - i don't want to say my father name, you can call him [leela](fname)
+      - [harikrishna](fname)
+      - my father name is [siva](fname)
+      - [ravi](fname) is my father
+      - [ravi](fname)
+      - ok, my father name is [leela](fname)
+      - father name is [leela](fname)
+  - intent: age
+    examples: |
+      - [21](age)
+      - [21](age) is my age
+      - my age is [21](age)
+      - [45](age)
+      - [23](age)
+      - [12](age)
+      - [999](age)
+      - [99](age)
+      - age is [21](age)
+      - my age [21](age)
+      - age [21](age)
+
+  - intent: phonenumber
+    examples: |
+      - [9581323427](phonenumber)
+      - [9581323427](phonenumber) is my phone number
+      - you can call me at [9581323427](phonenumber)
+      - save my number [9581323427](phonenumber)
+      - here it is [9581323427](phonenumber)
+      - my mobile number is [9581323427](phonenumber)
+      - my cell phone number is [9581323427](phonenumber)
+      - you can ping me at [9581323427](phonenumber)
+      - take my number [9581323427](phonenumber)
+      - [9581323427](phonenumber) is where you can call me
+      - [9999999999](phonenumber)
+      - [8790797960](phonenumber)
+      - [9988995566](phonenumber) is my phone number
+      - [9638527410](phonenumber)
+  - intent: mail
+    examples: |
+      - my mail is [lk@email.com](email)
+      - [lk@email.com](email) is my mail id
+      - [lk@gmail.com](email) is my gmail
+      - mail me at [lk@email.com](email)
+      - my mail id is [lk@email.com](email)
+      - you can mail me at [lk@email.com](email)
+      - [lk@email.com](email)
+      - [lk@op.com](email)
+      - [karthik.ut10@gmail.com](email)
+      - my mail is [lk@gmail.cv](email)
+      - [karrt](email)
+      - [lart@lay.com](email)
+  - intent: out_of_scope
+    examples: |
+      - that's not what I want to do
+      - wait stop
+      - you're no help
+      - this is no help at all
+      - how old are you
+      - I want to order a pizza
+      - tell me the weather
+      - this isn't working
+      - I already told you that
+      - don't like that
+      - I don't want to tell you that
+      - none of your business
+      - that's not right
+      - stop asking
+      - nevermind
+      - I want to do something else
+      - I changed my mind
+  - lookup: name.yml

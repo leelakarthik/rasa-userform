@@ -1,0 +1,209 @@
+version: "2.0"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: survey happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: affirm
+      - action: user_form
+      - active_loop: user_form
+
+  - story: survey stop
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: affirm
+      - action: user_form
+      - active_loop: user_form
+      - intent: out_of_scope
+      - action: utter_ask_continue
+      - intent: deny
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_goodbye
+
+  - story: survey continue
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: affirm
+      - action: user_form
+      - active_loop: user_form
+      - intent: out_of_scope
+      - action: utter_ask_continue
+      - intent: affirm
+      - action: user_form
+
+  - story: no survey
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: interactive_story_1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: affirm
+      - action: user_form
+      - active_loop: user_form
+      - slot_was_set:
+          - requested_slot: name
+      - slot_was_set:
+          - name: pavani
+      - slot_was_set:
+          - requested_slot: fname
+      - slot_was_set:
+          - name: pavani
+      - slot_was_set:
+          - fname: harikrishna
+      - slot_was_set:
+          - requested_slot: age
+      - slot_was_set:
+          - fname: harikrishna
+      - slot_was_set:
+          - age: "45"
+      - slot_was_set:
+          - requested_slot: phonenumber
+      - slot_was_set:
+          - phonenumber: "8790797960"
+      - slot_was_set:
+          - requested_slot: email
+      - slot_was_set:
+          - phonenumber: "8790797960"
+      - slot_was_set:
+          - email: karthik.ut10@gmail.com
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: action_submit_results
+      - action: utter_slots_values
+
+  - story: interactive_story_1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: affirm
+      - action: user_form
+      - active_loop: user_form
+      - slot_was_set:
+          - requested_slot: name
+      - intent: inform
+        entities:
+          - value: kiran
+      - action: utter_ask_name
+      - intent: inform
+        entities:
+          - name: kiran
+      - slot_was_set:
+          - name: kiran
+      - action: user_form
+      - slot_was_set:
+          - requested_slot: fname
+      - slot_was_set:
+          - fname: kiran
+      - slot_was_set:
+          - fname: siva
+      - slot_was_set:
+          - requested_slot: age
+      - slot_was_set:
+          - fname: siva
+      - slot_was_set:
+          - age: "23"
+      - slot_was_set:
+          - requested_slot: phonenumber
+      - slot_was_set:
+          - age: "23"
+      - slot_was_set:
+          - phonenumber: "9999999999"
+      - slot_was_set:
+          - requested_slot: email
+      - slot_was_set:
+          - phonenumber: "9999999999"
+      - slot_was_set:
+          - email: lk@op.com
+      - slot_was_set:
+          - requested_slot: null
+      - slot_was_set:
+          - email: lk@op.com
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: action_submit_results
+      - action: utter_slots_values
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - story: interactive_story_1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: affirm
+      - action: user_form
+      - active_loop: user_form
+      - slot_was_set:
+          - requested_slot: name
+      - slot_was_set:
+          - name: tim
+      - slot_was_set:
+          - requested_slot: fname
+      - slot_was_set:
+          - fname: tim
+      - slot_was_set:
+          - fname: ravi
+      - slot_was_set:
+          - requested_slot: age
+      - slot_was_set:
+          - fname: ravi
+      - slot_was_set:
+          - age: "12"
+      - slot_was_set:
+          - requested_slot: phonenumber
+      - slot_was_set:
+          - age: "12"
+      - slot_was_set:
+          - phonenumber: "9988995566"
+      - slot_was_set:
+          - requested_slot: email
+      - slot_was_set:
+          - phonenumber: "9988995566"
+      - slot_was_set:
+          - email: lk@gmail.cv
+      - slot_was_set:
+          - requested_slot: null
+      - slot_was_set:
+          - email: lk@gmail.cv
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: action_submit_results
+      - action: utter_slots_values

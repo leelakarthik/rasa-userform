@@ -1,0 +1,16 @@
+[
+  {
+    "text": "[leela] {\"entity\": \"name\"}",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 1,
+        "end": 6,
+        "confidence_entity": 0.3927404284477234,
+        "value": "leela",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

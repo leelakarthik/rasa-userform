@@ -1,0 +1,20 @@
+version: "2.0"
+stories:
+- story: sad path 1 (C:\Users\LEELAK~1\AppData\Local\Temp\tmpbwoeekls\fe8a34ec1e8b42c38b990fb10ea3f298_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: deny: not good
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: sad path 2 (C:\Users\LEELAK~1\AppData\Local\Temp\tmpbwoeekls\fe8a34ec1e8b42c38b990fb10ea3f298_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: deny: not good
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
